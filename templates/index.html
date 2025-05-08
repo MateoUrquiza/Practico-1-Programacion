@@ -1,0 +1,12 @@
+{% extends "layout.html" %} <!--HERENCIA-->
+
+<!--Bloque que vamos a rellenar-->
+{% block contenido %}
+    <h2>Seleccioná una ciudad:</h2>
+    <ul>
+        {% for nombre in ciudades %}
+            <li><a href="{{ url_for('clima') }}?ciudad={{ nombre }}">{{ nombre }}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock %}
+

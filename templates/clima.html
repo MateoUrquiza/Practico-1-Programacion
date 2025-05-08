@@ -1,0 +1,19 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+Clima en {{ ciudad }}
+{% endblock %}
+
+{% block contenido %}
+<div class="container mt-4">
+    <h1>Clima actual en {{ ciudad }}</h1>
+    <ul class="list-group mt-3">
+        <li class="list-group-item"><strong>Temperatura:</strong> {{ clima.temperature }} °C</li>
+        <li class="list-group-item"><strong>Velocidad del viento:</strong> {{ clima.windspeed }} km/h</li>
+    </ul>
+    <a href="/" class="btn btn-primary mt-3">Volver al inicio</a>
+</div>
+{% endblock %}
+
+
+
